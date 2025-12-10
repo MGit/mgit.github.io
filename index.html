@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Martin Guay - Creative Technology">
-    <meta name="keywords" content="deep learning, computer vision, motion capture, AI avatars, animation, VFX, GenAI, AR, VR, video games">
+    <meta name="keywords" content="graphics, vision, animation, motion, motion capture, deep learning, AI, VFX, AR, VR, video games">
     <meta name="author" content="Martin Guay">
     <title>Martin Guay</title>
     <link rel="stylesheet" href="style.css">
@@ -15,24 +15,21 @@
             <img src="Self Portraits/MG2025.jpeg" alt="Martin Guay" class="profile-pic">
             <h1>Martin Guay</h1>
             <div class="bio">
-                I lead the research and development of innovative technologies at the intersection of artificial intelligence, graphics, and human-computer interaction.
+                I lead R&D at the intersection of graphics, AI and human-computer interaction.
 
  <!--I drive innovation in AI and visual technology to deliver forward-looking solutions across film, gaming, and interactive media.-->
 
-                In 2018, I established <a href="#" onclick="navigateToTheme('📸 Marker-less Capture & Tracking'); return false;" class="bio-link">marker-less motion capture capabilities</a> and in-camera VFX called <I>synth2track</I>, which is operated today by Industrial Light & Magic (ILM).
+                In 2018, I established <a href="#" onclick="navigateToTheme('📸 Motion Capture'); return false;" class="bio-link">marker-less motion capture capabilities</a> and in-camera VFX called <I>synth2track</I> used by Industrial Light & Magic (ILM) and Marvel.
                 
-                 More recently, I established <a href="#" onclick="navigateToTheme('🤖 GenAI Motion Models'); return false;" class="bio-link">genAI for 3D motion </a> for fast motion authoring and editing; both at Pixar and ILM. 
-                Prior to this, I pioneered <a href="#" onclick="navigateToTheme('🤖 GenAI Motion Models'); return false;" class="bio-link">generative conversation models for 3D AI avatars</a> and chat bots, that understand and speak with people.</p>
+                 More recently, I established <a href="#" onclick="navigateToTheme('🖱️ Deep Motion Authoring'); return false;" class="bio-link">Deep Motion Authoring </a> which renders creating natural motion much more accessible. 
+                
+                 Prior to this, I pioneered <a href="#" onclick="navigateToTheme('🖱️ Deep Motion Authoring'); return false;" class="bio-link">
+                    autonomous characters driven by voice, terrain and music</a>, to enable conversational interactions, digital bands that can play any song and 3D character agents that navigate environments. </p>
             </p>
-                <p>During my Ph.D. I mathematically ellucidated artistic principles that yield clear visual communication and leveragged optimization to design  <a href="#" onclick="navigateToTheme('✍️ Intuitive Interfaces for 3D Authoring'); return false;" class="bio-link">new interfaces</a> 
-                    for automatically authoring compelling 3D movements. 
-
-                Physics simulation increase the immersive experience of 3D content and I conceived new approximations of the Navier-stokes equations that simplify the <a href="#" onclick="navigateToTheme('🔥 Simulation and Control'); return false;" class="bio-link">simulation</a> of 3D fluids; rendering fire and water effects more accessible to a greater audience. 
-                Then I created fully simulated characters that---similar to robots in the real world---react in a unique and realistic way to every interaction. 
-     
-                <p>
-                During my career, I had the privilege of experiencing both long term research and short term production. I started my journey in production developping and optimizing
-                <a href="#" onclick="navigateToTheme('🎮 Video Games Development'); return false;" class="bio-link">video games</a> on various platforms.
+                <p>During my Ph.D. I ellucidated artistic principles that help artists establish clear visual communication when drawing, 
+                    and turned these into  <a href="#" onclick="navigateToTheme('✍️ Sketch-based Interfaces'); return false;" class="bio-link">
+                        new sketch-based interfaces</a> for 3D motion authoring. 
+                I started my career in video game production <a href="#" onclick="navigateToTheme('🎮 Video Games Dev'); return false;" class="bio-link">developping game engines </a>dfor different platforms such as the XBox, PC and iPhone.
                 </p>
             </div>
         </header>
@@ -59,6 +56,16 @@
 
     <script>
         const publications = [
+
+            {
+                year: 2025, type: 'publication', 
+                title: "Implicit Bézier Motion Model for Precise Spatial and Temporal Control", 
+                title_link: "https://www.youtube.com/watch?v=mdXLeX01Lkg", venue: "Motion in Games 2025", award: "(Best Paper Award)",
+                 authors: "Luca Vögeli, Dhruv Agrawal, Martin Guay, Dominik Borer, Robert W. Sumner, Jakob Buhmann", 
+                 img_src: "Neural Animation/IBMM.jpeg", img_link: "https://www.youtube.com/watch?v=mdXLeX01Lkg",
+                  pdf_link: "https://studios.disneyresearch.com/app/uploads/2025/12/Implicit-Be%CC%81zier-Motion-Model-for-Precise-Spatial-and-Temporal-Control-Paper.pdf", 
+                  video_link: "https://www.youtube.com/watch?v=mdXLeX01Lkg", themes: ["🖱️ Deep Motion Authoring"]
+            },
             // Academic Publications
             {
                 year: 2025, type: 'publication', title: "Synth2track Editor for Efficient Match-Animation", 
@@ -69,7 +76,7 @@
                 img_link: "https://youtu.be/YneDCmmDmVU", 
                 pdf_link: "https://studios.disneyresearch.com/2025/07/21/synth2track-editor-for-efficient-match-animation/f", 
                 video_link: "https://youtu.be/YneDCmmDmVU", 
-                themes: ["📸 Marker-less Capture & Tracking", "✍️ Intuitive Interfaces for 3D Authoring"]
+                themes: ["📸 Motion Capture"]
             },
             {
                 year: 2024, type: 'publication', 
@@ -78,28 +85,39 @@
                  authors: "Justin Studer, Dhruv Agrawal, Dominik Borer, Seyedmorteza Sadat, Robert W. Sumner, Martin Guay, Jakob Buhmann", 
                  img_src: "Neural Animation/Factorized.jpeg", img_link: "https://www.youtube.com/watch?v=bmwEWYb21-8",
                   pdf_link: "https://assets.studios.disneyresearch.com/app/uploads/2024/10/Factorized-Motion-Diffusion-for-Precise-and-Character-Agnostic-Motion-Inbetweening-Paper.pdf", 
-                  video_link: "https://www.youtube.com/watch?v=bmwEWYb21-8", themes: ["🤖 GenAI Motion Models", "✍️ Intuitive Interfaces for 3D Authoring"]
+                  video_link: "https://www.youtube.com/watch?v=bmwEWYb21-8", themes: ["🖱️ Deep Motion Authoring"]
             },
             {
-                year: 2024, type: 'publication', title: "Skel-Betweener: a Neural Motion Rig for Interactive Motion Authoring", title_link: "https://www.youtube.com/watch?v=rAe-3dY0iKg", venue: "SIGGRAPH Asia 2024", authors: "Dhruv Agrawal, Jakob Buhmann, Dominik Borer, Robert W. Sumner, Martin Guay", img_src: "Neural Animation/SkelBetweener.jpeg", img_link: "https://www.youtube.com/watch?v=rAe-3dY0iKg", pdf_link: "https://assets.studios.disneyresearch.com/app/uploads/2024/10/Skel-inbetweening-for-Intuitive-Neural-Motion-Authoring-paper.pdf", video_link: "https://www.youtube.com/watch?v=rAe-3dY0iKg", themes: ["🤖 GenAI Motion Models","✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2024,
+                 type: 'publication', 
+                 title: "Skel-Betweener: a Neural Motion Rig for Interactive Motion Authoring", 
+                 title_link: "https://www.youtube.com/watch?v=rAe-3dY0iKg", venue: "SIGGRAPH Asia 2024", 
+                 authors: "Dhruv Agrawal, Jakob Buhmann, Dominik Borer, Robert W. Sumner, Martin Guay", 
+                 img_src: "Neural Animation/SkelBetweener.jpeg", img_link: "https://www.youtube.com/watch?v=rAe-3dY0iKg", 
+                 pdf_link: "https://assets.studios.disneyresearch.com/app/uploads/2024/10/Skel-inbetweening-for-Intuitive-Neural-Motion-Authoring-paper.pdf", 
+                 video_link: "https://www.youtube.com/watch?v=rAe-3dY0iKg", themes: ["🖱️ Deep Motion Authoring"]
             },
             {
-                year: 2024, type: 'publication', title: "Trajectory Augmentation for Robust Neural Locomotion Controllers", title_link: "https://www.youtube.com/watch?v=se5RM_A8oxM", venue: "VISIGRAPH 2024", award: "(Best Paper Award)", authors: "Dhruv Agrawal, Mattias Koenig, Dominik Borer, Jakob Buhmann, Robert W. Sumner, Martin Guay", img_src: "Neural Animation/locomotion.jpeg", img_link: "https://www.youtube.com/watch?v=se5RM_A8oxM", pdf_link: "https://studios.disneyresearch.com/2024/02/05/trajectory-augmentation-for-robust-neural-locomotion-controllers/", video_link: "https://www.youtube.com/watch?v=se5RM_A8oxM", themes: ["🤖 GenAI Motion Models"]
+                year: 2024, type: 'publication', title: "Trajectory Augmentation for Robust Neural Locomotion Controllers", title_link: "https://www.youtube.com/watch?v=se5RM_A8oxM", venue: "VISIGRAPH 2024", award: "(Best Paper Award)", authors: "Dhruv Agrawal, Mattias Koenig, Dominik Borer, Jakob Buhmann, Robert W. Sumner, Martin Guay", img_src: "Neural Animation/locomotion.jpeg", img_link: "https://www.youtube.com/watch?v=se5RM_A8oxM", pdf_link: "https://studios.disneyresearch.com/2024/02/05/trajectory-augmentation-for-robust-neural-locomotion-controllers/", video_link: "https://www.youtube.com/watch?v=se5RM_A8oxM",
+                 themes: ["🤖 Autonomous Characters"]
             },
             {
-                year: 2023, type: 'publication', title: "Skel-IK: Pose and Skeleton Aware Neural IK", title_link: "https://www.youtube.com/watch?v=-ot5oHs9ajk", venue: "SIGGRAPH Asia 2023", authors: "Dhruv Agrawal, Dominik Borer, Jakob Buhmann, Robert W. Sumner, Martin Guay", img_src: "Neural Animation/skelIK.jpeg", img_link: "https://www.youtube.com/watch?v=-ot5oHs9ajk", pdf_link: "https://studios.disneyresearch.com/2023/12/11/pose-and-skeleton-aware-neural-ik-for-pose-and-motion-editing/", video_link: "https://www.youtube.com/watch?v=-ot5oHs9ajk", themes: ["🤖 GenAI Motion Models", "✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2023, type: 'publication', title: "Skel-IK: Pose and Skeleton Aware Neural IK",
+                 title_link: "https://www.youtube.com/watch?v=-ot5oHs9ajk", venue: "SIGGRAPH Asia 2023", authors: "Dhruv Agrawal, Dominik Borer, Jakob Buhmann, Robert W. Sumner, Martin Guay",
+                  img_src: "Neural Animation/skelIK.jpeg", img_link: "https://www.youtube.com/watch?v=-ot5oHs9ajk", pdf_link: "https://studios.disneyresearch.com/2023/12/11/pose-and-skeleton-aware-neural-ik-for-pose-and-motion-editing/", video_link: "https://www.youtube.com/watch?v=-ot5oHs9ajk", 
+                  themes: ["🖱️ Deep Motion Authoring"]
             },
             {
-                year: 2022, type: 'publication', title: "Generalized Pose Space Embeddings for Training in the Wild using Analysis-by-Synthesis", title_link: "https://arxiv.org/html/2411.08603v1", venue: "arxiv 2022", authors: "Dominik Borer, Jakob Buhmann, Martin Guay", img_src: "Analysis-by-Synthesis/model_overview.jpeg", img_link: "https://www.youtube.com/watch?v=vjcM27zVUzM", pdf_link: "https://arxiv.org/html/2411.08603v1", video_link: "https://www.youtube.com/watch?v=vjcM27zVUzM", themes: ["📸 Marker-less Capture & Tracking"]
+                year: 2022, type: 'publication', title: "Generalized Pose Space Embeddings for Training in the Wild using Analysis-by-Synthesis", title_link: "https://arxiv.org/html/2411.08603v1", venue: "arxiv 2022", authors: "Dominik Borer, Jakob Buhmann, Martin Guay", img_src: "Analysis-by-Synthesis/model_overview.jpeg", img_link: "https://www.youtube.com/watch?v=vjcM27zVUzM", pdf_link: "https://arxiv.org/html/2411.08603v1", video_link: "https://www.youtube.com/watch?v=vjcM27zVUzM", themes: ["📸 Motion Capture"]
             },
             {
-                year: 2021, type: 'publication', title: "Augmenting Cats and Dogs", title_link: "https://www.youtube.com/watch?v=I2MFv3OF9HE", venue: "VISIGRAPP 2021", authors: "Dominik Borer, Niat Isik, Jakob Buhmann, Martin Guay", img_src: "Cats And Dogs/feral.jpeg", img_link: "https://www.youtube.com/watch?v=I2MFv3OF9HE", pdf_link: "https://cgl.ethz.ch/disclaimer.php?dlurl=/Downloads/Publications/Papers/2021/Bor21a/Bor21a.pdf", video_link: "https://www.youtube.com/watch?v=I2MFv3OF9HE", themes: ["🕶️ Augmented Reality", "📸 Marker-less Capture & Tracking"]
+                year: 2021, type: 'publication', title: "Augmenting Cats and Dogs", title_link: "https://www.youtube.com/watch?v=I2MFv3OF9HE", venue: "VISIGRAPP 2021", authors: "Dominik Borer, Niat Isik, Jakob Buhmann, Martin Guay", img_src: "Cats And Dogs/feral.jpeg", img_link: "https://www.youtube.com/watch?v=I2MFv3OF9HE", pdf_link: "https://cgl.ethz.ch/disclaimer.php?dlurl=/Downloads/Publications/Papers/2021/Bor21a/Bor21a.pdf", video_link: "https://www.youtube.com/watch?v=I2MFv3OF9HE", themes: ["🕶️ Augmented Reality", "📸 Motion Capture"]
             },
             {
-                year: 2019, type: 'publication', title: "Techniques for Inferring Three-Dimensional Poses From Two-Dimensional Images", title_link: "https://patents.google.com/patent/US10916046B2/en", venue: "US Patent 2019", authors: "Martin Guay, Jakob Buhmann, Dominik Borer", img_src: "Patents/tracking_patent2020.mp4", img_link: "https://patents.google.com/patent/US10916046B2/en", themes: ["📸 Marker-less Capture & Tracking"]
+                year: 2019, type: 'publication', title: "Techniques for Inferring Three-Dimensional Poses From Two-Dimensional Images", title_link: "https://patents.google.com/patent/US10916046B2/en", venue: "US Patent 2019", authors: "Martin Guay, Jakob Buhmann, Dominik Borer", img_src: "Patents/tracking_patent2020.mp4", img_link: "https://patents.google.com/patent/US10916046B2/en", themes: ["📸 Motion Capture"]
             },
             {
-                year: 2019, type: 'publication', title: "High Resolution Rig-space Neural Rendering", title_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", venue: "arxiv 2019", authors: "Dominik Borer, Jakob Buhmann, Martin Guay", img_src: "Rigspace Neural Rendering/RigSpaceNeuralRendering.jpeg", img_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", pdf_link: "https://arxiv.org/pdf/2003.09820.pdf", video_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", themes: ["📸 Marker-less Capture & Tracking"]
+                year: 2019, type: 'publication', title: "High Resolution Rig-space Neural Rendering", title_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", venue: "arxiv 2019", authors: "Dominik Borer, Jakob Buhmann, Martin Guay", img_src: "Rigspace Neural Rendering/RigSpaceNeuralRendering.jpeg", img_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", pdf_link: "https://arxiv.org/pdf/2003.09820.pdf", video_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", themes: ["📸 Motion Capture"]
             },
             {
                 year: 2018, type: 'publication', title: "AR Costumes: Automatically Augmenting Watertight Costumes from a single RGB Image", title_link: "https://www.youtube.com/watch?v=p2Lj2ScIkvA", venue: "VRCAI 2018", authors: "Christoph Maurhofer, Gokcen Cimen, Mattia Ryffel, Robert W. Sumner, Martin Guay", img_src: "AR Costumes/ARCostumes.mp4", img_link: "https://www.youtube.com/watch?v=p2Lj2ScIkvA", pdf_link: "https://s3-us-west-1.amazonaws.com/disneyresearch/wp-content/uploads/20181029220913/AR-Costumes-Automatically-Augmenting-Watertight-Costumes-from-a-single-RGB-Image-Paper.pdf", video_link: "https://www.youtube.com/watch?v=p2Lj2ScIkvA", themes: ["🕶️ Augmented Reality"]
@@ -108,79 +126,88 @@
                 year: 2018, type: 'publication', title: "AR Poser: Automatically Augmenting Mobile Pictures with Digital Avatars Imitating Poses", title_link: "https://www.youtube.com/watch?v=Ug-bzFEN8H8", venue: "CGVCVIP 2018", authors: "Gokcen Cimen, Christoph Maurhofer, Robert W. Sumner, Martin Guay", img_src: "AR Poser/AR Poser.png", img_link: "https://www.youtube.com/watch?v=Ug-bzFEN8H8", pdf_link: "AR Poser/ARPoser.pdf", video_link: "https://www.youtube.com/watch?v=Ug-bzFEN8H8", themes: ["🕶️ Augmented Reality"]
             },
             {
-                year: 2018, type: 'publication', title: "Real-time Conversation Motion Model for AI Avatars", title_link: "https://www.youtube.com/watch?v=O2BPu3ypuHQ", venue: "CGVCVIP 2018", authors: "Dominik Borer, Dominic Lutz, Robert W. Sumner, Martin Guay", img_src: "AIAvatar/AvatarChat.jpeg", img_link: "https://www.youtube.com/watch?v=O2BPu3ypuHQ", pdf_link: "https://arxiv.org/pdf/1903.05448.pdf", video_link: "https://www.youtube.com/watch?v=O2BPu3ypuHQ", themes: ["🤖 GenAI Motion Models"]
+                year: 2018, type: 'publication', title: "Voice-driven Animation of Standing Conversationalist", title_link: "https://www.youtube.com/watch?v=O2BPu3ypuHQ", venue: "CGVCVIP 2018", authors: "Dominik Borer, Dominic Lutz, Robert W. Sumner, Martin Guay", 
+                img_src: "AIAvatar/AvatarChat.jpeg", img_link: "https://www.youtube.com/watch?v=O2BPu3ypuHQ", pdf_link: "https://arxiv.org/pdf/1903.05448.pdf", video_link: "https://www.youtube.com/watch?v=O2BPu3ypuHQ", themes: ["🤖 Autonomous Characters"]
             },
             {
-                year: 2018, type: 'publication', title: "Keys-to-sim: animation to simulation using stochastic optimization", title_link: "https://www.youtube.com/watch?v=aO28Rqrhu34", venue: "CGVC 2018", authors: "Dominic Borer, Robert W. Sumner, Martin Guay", img_src: "Keys To Sim/teaser.jpeg", img_link: "https://www.youtube.com/watch?v=aO28Rqrhu34", pdf_link: "https://cgl.ethz.ch/disclaimer.php?dlurl=/Downloads/Publications/Papers/2018/Bor18a/Bor18a.pdf", video_link: "https://www.youtube.com/watch?v=aO28Rqrhu34", themes: ["🔥 Simulation and Control"]
+                year: 2018, type: 'publication', title: "Keys-to-sim: animation to simulation using stochastic optimization", title_link: "https://www.youtube.com/watch?v=aO28Rqrhu34", venue: "CGVC 2018", authors: "Dominic Borer, Robert W. Sumner, Martin Guay", 
+                img_src: "Keys To Sim/teaser.jpeg", img_link: "https://www.youtube.com/watch?v=aO28Rqrhu34", pdf_link: "https://cgl.ethz.ch/disclaimer.php?dlurl=/Downloads/Publications/Papers/2018/Bor18a/Bor18a.pdf", video_link: "https://www.youtube.com/watch?v=aO28Rqrhu34", themes: ["🤖 Autonomous Charactersol"]
             },
             {
-                year: 2018, type: 'publication', title: "Exploring interactions with a fully Simulated SIMBICON 3D Character", title_link: "https://www.youtube.com/watch?v=00XO4AuBP1Y", venue: "CG and Games 2018", authors: "Dominic Borer, Simone Giguarri, Robert W. Sumner, Martin Guay", img_src: "SIMBICON/SIMBICON_VR.mp4", img_link: "https://www.youtube.com/watch?v=00XO4AuBP1Y", pdf_link: "https://link.springer.com/referenceworkentry/10.1007/978-3-319-08234-9_220-1", video_link: "https://www.youtube.com/watch?v=00XO4AuBP1Y", themes: ["🔥 Simulation and Control", "🤖 GenAI Motion Models"]
+                year: 2018, type: 'publication', title: "Exploring interactions with a fully Simulated SIMBICON 3D Character", 
+                title_link: "https://www.youtube.com/watch?v=00XO4AuBP1Y", venue: "CG and Games 2018", authors: "Dominic Borer, Simone Giguarri, Robert W. Sumner, Martin Guay", img_src: "SIMBICON/SIMBICON_VR.mp4", img_link: "https://www.youtube.com/watch?v=00XO4AuBP1Y", pdf_link: "https://link.springer.com/referenceworkentry/10.1007/978-3-319-08234-9_220-1", video_link: "https://www.youtube.com/watch?v=00XO4AuBP1Y", 
+                themes: ["🤖 Autonomous Charactersol", "🖱️ Autonomous Characters"]
             },
             {
                 year: 2017, type: 'publication', title: "Modeling Physical Interactions with Real World Objects: Interacting with Intuitive Characters in AR", title_link: "https://www.youtube.com/watch?v=R5uuwAe6BX0", venue: "Workshop on AI in VR and AR 2017", authors: "Gokcen Cimen, Ye Yuan, Stelian Coros, Robert W. Sumner, Martin Guay", img_src: "AR Quadrupeds/AR Physical.mp4", img_link: "https://www.youtube.com/watch?v=R5uuwAe6BX0", pdf_link: "AR Quadrupeds/IntuitiveARCharacters.pdf", video_link: "https://www.youtube.com/watch?v=R5uuwAe6BX0", themes: ["🕶️ Augmented Reality"]
             },
             {
-                year: 2017, type: 'publication', title: "Automatic Quadruped Animation on Lion King Previs", title_link: "https://www.youtube.com/watch?v=W4sqCLAJY1o", venue: "US Patent 2017", authors: "Ye Yuan, Moritz Geilinger, Stelian Coros, Robert W. Sumner, Martin Guay", img_src: "Inverse Dynamics Gokcen/lionking.png", img_link: "https://www.youtube.com/watch?v=W4sqCLAJY1o", pdf_link: "https://patents.google.com/patent/US10553009B2/en", video_link: "https://www.youtube.com/watch?v=W4sqCLAJY1o", themes: ["🔥 Simulation and Control"]
+                year: 2017, type: 'publication', title: "Automatic Quadruped Animation on Lion King Previs", title_link: "https://www.youtube.com/watch?v=W4sqCLAJY1o", venue: "US Patent 2017", authors: "Ye Yuan, Moritz Geilinger, Stelian Coros, Robert W. Sumner, Martin Guay", img_src: "Inverse Dynamics Gokcen/lionking.png", img_link: "https://www.youtube.com/watch?v=W4sqCLAJY1o", pdf_link: "https://patents.google.com/patent/US10553009B2/en", video_link: "https://www.youtube.com/watch?v=W4sqCLAJY1o", themes: ["🤖 Autonomous Charactersol"]
             },
             {
-                year: 2017, type: 'publication', title: "Using Model-based Inverse Dynamics for live-Pupetteering a 3D Character with a Tail", title_link: "https://www.iadisportal.org/digital-library/an-intuitive-interface-for-human-performance-tracking-with-simulated-characters", venue: "CGVCVIP 2017", authors: "Gokcen Cimen, Martin Guay, Stelian Coros, Robert W. Sumner", img_src: "Inverse Dynamics Gokcen/InverseDynamics.png", img_link: "https://www.youtube.com/watch?v=7hOukEo6Tzk", pdf_link: "https://www.iadisportal.org/digital-library/an-intuitive-interface-for-human-performance-tracking-with-simulated-characters", video_link: "https://www.youtube.com/watch?v=7hOukEo6Tzk", themes: ["🔥 Simulation and Control"]
+                year: 2017, type: 'publication', title: "Using Model-based Inverse Dynamics for live-Pupetteering a 3D Character with a Tail", title_link: "https://www.iadisportal.org/digital-library/an-intuitive-interface-for-human-performance-tracking-with-simulated-characters", venue: "CGVCVIP 2017", authors: "Gokcen Cimen, Martin Guay, Stelian Coros, Robert W. Sumner", img_src: "Inverse Dynamics Gokcen/InverseDynamics.png", img_link: "https://www.youtube.com/watch?v=7hOukEo6Tzk", pdf_link: "https://www.iadisportal.org/digital-library/an-intuitive-interface-for-human-performance-tracking-with-simulated-characters", video_link: "https://www.youtube.com/watch?v=7hOukEo6Tzk", themes: ["🤖 Autonomous Charactersol"]
             },
             {
-                year: 2017, type: 'publication', title: "Authoring Motion Cycles", title_link: "https://www.youtube.com/watch?v=Do1BBNGL7Do", venue: "SCA 2017", authors: "Loïc Ciccone, Martin Guay, Mauri Nitti, Robert W. Sumner", img_src: "Motion Cycles/motion_cycles.png", img_link: "https://www.youtube.com/watch?v=Do1BBNGL7Do", pdf_link: "https://la.disneyresearch.com/publication/authoring-motion-cycles/", video_link: "https://www.youtube.com/watch?v=Do1BBNGL7Do", themes: ["✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2017, type: 'publication', title: "Authoring Motion Cycles", title_link: "https://www.youtube.com/watch?v=Do1BBNGL7Do", 
+                venue: "SCA 2017", authors: "Loïc Ciccone, Martin Guay, Mauri Nitti, Robert W. Sumner", img_src: "Motion Cycles/motion_cycles.png", img_link: "https://www.youtube.com/watch?v=Do1BBNGL7Do", pdf_link: "https://la.disneyresearch.com/publication/authoring-motion-cycles/", video_link: "https://www.youtube.com/watch?v=Do1BBNGL7Do", themes: ["✍️ Sketch-based Interfaces"]
             },
             {
-                year: 2016, type: 'publication', title: "AI Characters: Autonomous Environment-aware Conversational 3D Avatars !", title_link: "https://www.youtube.com/watch?v=zvy_-V97FI8", venue: "2016", authors: "David Niggli, Steven Poulakos, Robert W. Sumner, Martin Guay", img_src: "AIAvatar/FirstProto.jpeg", img_link: "https://www.youtube.com/watch?v=zvy_-V97FI8", pdf_link: "AIAvatar/EmbodiedAvatar2016.pdf", video_link: "https://www.youtube.com/watch?v=zvy_-V97FI8", themes: ["🤖 GenAI Motion Models"]
+                year: 2016, type: 'publication', title: "AI Characters: Autonomous Environment-aware Conversational 3D Avatars !", title_link: "https://www.youtube.com/watch?v=zvy_-V97FI8", venue: "2016", authors: "David Niggli, Steven Poulakos, Robert W. Sumner, Martin Guay", img_src: "AIAvatar/FirstProto.jpeg", img_link: "https://www.youtube.com/watch?v=zvy_-V97FI8", pdf_link: "AIAvatar/EmbodiedAvatar2016.pdf", video_link: "https://www.youtube.com/watch?v=zvy_-V97FI8", themes: ["🤖 Autonomous Characters"]
             },
             {
-                year: 2016, type: 'publication', title: "Learning an Interpretable Space for Walking Motion using a Variational Autoencoder", title_link: "https://www.iadisportal.org/digital-library/automatically-learning-an-intuitive-animation-interface-from-a-collection-of-human-motion-clips", venue: "CGVCVIP 2016", authors: "Marcel Ludi, Martin Guay, Brian McWilliams, Robert W. Sumner", img_src: "VAE Interface 2016/VAE2016.jpeg", img_link: "https://www.youtube.com/watch?v=h0wz-08cgow", pdf_link: "https://www.iadisportal.org/digital-library/automatically-learning-an-intuitive-animation-interface-from-a-collection-of-human-motion-clips", video_link: "https://www.youtube.com/watch?v=h0wz-08cgow", themes: ["🤖 GenAI Motion Models"]
+                year: 2016, type: 'publication', title: "Learning an Interpretable Space for Walking Motion using a Variational Autoencoder", title_link: "https://www.iadisportal.org/digital-library/automatically-learning-an-intuitive-animation-interface-from-a-collection-of-human-motion-clips", venue: "CGVCVIP 2016", authors: "Marcel Ludi, Martin Guay, Brian McWilliams, Robert W. Sumner", img_src: "VAE Interface 2016/VAE2016.jpeg", img_link: "https://www.youtube.com/watch?v=h0wz-08cgow", pdf_link: "https://www.iadisportal.org/digital-library/automatically-learning-an-intuitive-animation-interface-from-a-collection-of-human-motion-clips", 
+                video_link: "https://www.youtube.com/watch?v=h0wz-08cgow", themes: ["🖱️ Deep Motion Authoring"]
             },
             {
-                year: 2016, type: 'publication', title: "Virtual Band Plays any Song on Demand for a Live Karaoke", title_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", venue: "SCA 2016", authors: "Renzo Roth & CGL Ph.D. Students, Martin Guay", img_src: "Karaoke/SCAKaraoke.png", img_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", video_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", themes: ["🤖 GenAI Motion Models"]
+                year: 2016, type: 'publication', title: "Music-Driven Animaiton Using Motion Editing", 
+                title_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", venue: "SCA 2016", authors: "Renzo Roth & CGL Ph.D. Students, Martin Guay", 
+                img_src: "Karaoke/SCAKaraoke.png", img_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", video_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", themes: ["🤖 Autonomous Characters"]
             },
             {
-                year: 2016, type: 'publication', title: "Flow Curves: an Intuitive Interface for Coherent Scene Deformation", title_link: "https://www.youtube.com/watch?v=VxbK4-rJ2og", venue: "Pacific Graphics 2016", authors: "Loïc Ciccone, Martin Guay, Robert W. Sumner", img_src: "Flow Curves/FlowCurves.png", img_link: "https://www.youtube.com/watch?v=VxbK4-rJ2og", pdf_link: "Flow Curves/FlowCurves.pdf", video_link: "https://www.youtube.com/watch?v=VxbK4-rJ2og", themes: ["✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2016, type: 'publication', title: "Flow Curves: an Intuitive Interface for Coherent Scene Deformation", title_link: "https://www.youtube.com/watch?v=VxbK4-rJ2og", venue: "Pacific Graphics 2016", authors: "Loïc Ciccone, Martin Guay, Robert W. Sumner", img_src: "Flow Curves/FlowCurves.png", img_link: "https://www.youtube.com/watch?v=VxbK4-rJ2og", pdf_link: "Flow Curves/FlowCurves.pdf", video_link: "https://www.youtube.com/watch?v=VxbK4-rJ2og", themes: ["✍️ Sketch-based Interfaces"]
             },
             {
-                year: 2015, type: 'publication', title: "Space-time sketching of character animation", title_link: "https://www.youtube.com/watch?v=9d3LOCbFNy4", venue: "SIGGRAPH 2015", authors: "Martin Guay, Remi Ronfard, Michael Gleicher, Marie-Paule Cani", img_src: "Space-time Sketching/Space-time sketching.png", img_link: "https://www.youtube.com/watch?v=9d3LOCbFNy4", pdf_link: "Space-time Sketching/SpaceTimeSketching.pdf", video_link: "https://www.youtube.com/watch?v=9d3LOCbFNy4", themes: ["✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2015, type: 'publication', title: "Space-time sketching of character animation", title_link: "https://www.youtube.com/watch?v=9d3LOCbFNy4", venue: "SIGGRAPH 2015", authors: "Martin Guay, Remi Ronfard, Michael Gleicher, Marie-Paule Cani", img_src: "Space-time Sketching/Space-time sketching.png", img_link: "https://www.youtube.com/watch?v=9d3LOCbFNy4", pdf_link: "Space-time Sketching/SpaceTimeSketching.pdf", video_link: "https://www.youtube.com/watch?v=9d3LOCbFNy4", themes: ["✍️ Sketch-based Interfaces"]
             },
             {
-                year: 2015, type: 'publication', title: "Adding dynamics to sketch-based character animation", title_link: "https://www.youtube.com/watch?v=y2EzLg21I-4", venue: "SBIM 2015", authors: "Martin Guay, Remi Ronfard, Michael Gleicher, Marie-Paule Cani", img_src: "Elastic LOA/ELOA.png", img_link: "https://www.youtube.com/watch?v=y2EzLg21I-4", pdf_link: "https://hal.inria.fr/hal-01154847/document", video_link: "https://www.youtube.com/watch?v=y2EzLg21I-4", themes: ["✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2015, type: 'publication', title: "Adding dynamics to sketch-based character animation", title_link: "https://www.youtube.com/watch?v=y2EzLg21I-4", venue: "SBIM 2015", authors: "Martin Guay, Remi Ronfard, Michael Gleicher, Marie-Paule Cani", img_src: "Elastic LOA/ELOA.png", img_link: "https://www.youtube.com/watch?v=y2EzLg21I-4", pdf_link: "https://hal.inria.fr/hal-01154847/document", video_link: "https://www.youtube.com/watch?v=y2EzLg21I-4", themes: ["✍️ Sketch-based Interfaces"]
             },
             {
-                year: 2013, type: 'publication', title: "The Line of Action: an Intuitive Interface for Expressive Character Posing", title_link: "https://www.youtube.com/watch?v=QgrQuBwlbSE", venue: "SIGGRAPH Asia 2013", authors: "Martin Guay, Marie-Paule Cani, Remi Ronfard", img_src: "Line of Action/loa.mp4", img_link: "https://www.youtube.com/watch?v=QgrQuBwlbSE", pdf_link: "Line of Action/LOA.pdf", video_link: "https://www.youtube.com/watch?v=QgrQuBwlbSE", themes: ["✍️ Intuitive Interfaces for 3D Authoring"]
+                year: 2013, type: 'publication', title: "The Line of Action: an Intuitive Interface for Expressive Character Posing", title_link: "https://www.youtube.com/watch?v=QgrQuBwlbSE", venue: "SIGGRAPH Asia 2013", authors: "Martin Guay, Marie-Paule Cani, Remi Ronfard", img_src: "Line of Action/loa.mp4", img_link: "https://www.youtube.com/watch?v=QgrQuBwlbSE", pdf_link: "Line of Action/LOA.pdf", video_link: "https://www.youtube.com/watch?v=QgrQuBwlbSE", themes: ["✍️ Sketch-based Interfaces"]
             },
             {
-                year: 2013, type: 'publication', title: "Simple rasterization-based liquids", title_link: "https://www.youtube.com/watch?v=mSAwLGMrqBw", venue: "GPU Pro 5, 2013", authors: "Martin Guay", img_src: "GPU Fluids/Liquids.png", img_link: "https://www.youtube.com/watch?v=mSAwLGMrqBw", pdf_link: "https://inria.hal.science/hal-01015306/document", video_link: "https://www.youtube.com/watch?v=mSAwLGMrqBw", themes: ["🔥 Simulation and Control", "💻 GPU and Real-Time Simulation"]
+                year: 2013, type: 'publication', title: "Simple rasterization-based liquids", title_link: "https://www.youtube.com/watch?v=mSAwLGMrqBw", venue: "GPU Pro 5, 2013", authors: "Martin Guay", img_src: "GPU Fluids/Liquids.png", img_link: "https://www.youtube.com/watch?v=mSAwLGMrqBw", pdf_link: "https://inria.hal.science/hal-01015306/document", video_link: "https://www.youtube.com/watch?v=mSAwLGMrqBw", themes: ["🤖 Autonomous Charactersol", "💻 GPU Sims"]
             },
             {
-                year: 2011, type: 'publication', title: "Screen space animation of fire", title_link: "https://inria.hal.science/hal-00646268", venue: "SIGGRAPH Asia 2011", authors: "Martin Guay, Fabrice Colin, Richard Egli", img_src: "GPU Fluids/fire_small.mp4", img_link: "https://youtu.be/df0dwBuML70", pdf_link: "https://inria.hal.science/hal-00646268", video_link: "https://youtu.be/df0dwBuML70", themes: ["🔥 Simulation and Control", "💻 GPU and Real-Time Simulation"]
+                year: 2011, type: 'publication', title: "Screen space animation of fire", title_link: "https://inria.hal.science/hal-00646268", venue: "SIGGRAPH Asia 2011", authors: "Martin Guay, Fabrice Colin, Richard Egli", img_src: "GPU Fluids/fire_small.mp4", img_link: "https://youtu.be/df0dwBuML70", pdf_link: "https://inria.hal.science/hal-00646268", video_link: "https://youtu.be/df0dwBuML70", themes: ["🤖 Autonomous Charactersol", "💻 GPU Sims"]
             },
             {
-                year: 2011, type: 'publication', title: "Simple and Fast Fluids", title_link: "https://www.youtube.com/watch?v=vS5ibFXxRMU", venue: "GPU Pro 2, 2011", authors: "Martin Guay, Fabrice Colin, Richard Egli", img_src: "GPU Fluids/SimpleFluids.png", img_link: "https://www.youtube.com/watch?v=vS5ibFXxRMU", pdf_link: "https://hal.inria.fr/file/index/docid/596050/filename/PreprintSFFGuayColinEgli.pdf", video_link: "https://www.youtube.com/watch?v=vS5ibFXxRMU", data_link: "GPU Fluids/DemosSFF.zip", themes: ["🔥 Simulation and Control", "💻 GPU and Real-Time Simulation"]
+                year: 2011, type: 'publication', title: "Simple and Fast Fluids", title_link: "https://www.youtube.com/watch?v=vS5ibFXxRMU", venue: "GPU Pro 2, 2011", authors: "Martin Guay, Fabrice Colin, Richard Egli", img_src: "GPU Fluids/SimpleFluids.png", img_link: "https://www.youtube.com/watch?v=vS5ibFXxRMU", pdf_link: "https://hal.inria.fr/file/index/docid/596050/filename/PreprintSFFGuayColinEgli.pdf", video_link: "https://www.youtube.com/watch?v=vS5ibFXxRMU", data_link: "GPU Fluids/DemosSFF.zip", themes: ["🤖 Autonomous Charactersol", "💻 GPU Sims"]
             },
             {
-                year: 2010, type: 'publication', title: "Multi-dimensional Unconditionally Stable Alternate Direction Explicit (ADE) Scheme for the Convection-Diffusion Equation", title_link: "https://hal.inria.fr/hal-00750389v2/document", venue: "Conference on Nonlinear Wave Phenomena 2010", authors: "Martin Guay, Fabrice Colin, Richard Egli", img_src: "ADE/ADESmall.jpg", img_link: "https://hal.inria.fr/hal-00750389v2/document", pdf_link: "https://hal.inria.fr/hal-00750389v2/document", themes: ["🔥 Simulation and Control"]
+                year: 2010, type: 'publication', title: "Multi-dimensional Unconditionally Stable Alternate Direction Explicit (ADE) Scheme for the Convection-Diffusion Equation", title_link: "https://hal.inria.fr/hal-00750389v2/document", venue: "Conference on Nonlinear Wave Phenomena 2010", authors: "Martin Guay, Fabrice Colin, Richard Egli", img_src: "ADE/ADESmall.jpg", img_link: "https://hal.inria.fr/hal-00750389v2/document", pdf_link: "https://hal.inria.fr/hal-00750389v2/document", themes: ["🤖 Autonomous Charactersol"]
             },
             // Video Games (Integrated)
             {
-                type: 'game', year: 2011, title: "A Game of Thrones: Genesis (PC)", title_link: "https://en.wikipedia.org/wiki/A_Game_of_Thrones:_Genesis", venue: "PC Game", authors: "Cyanide Studio Montreal (C++)", img_src: "Games/AGOT.jpg", img_link: "https://en.wikipedia.org/wiki/A_Game_of_Thrones:_Genesis", themes: ["🎮 Video Games Development", "💻 GPU and Real-Time Simulation"]
+                type: 'game', year: 2011, title: "A Game of Thrones: Genesis (PC)", title_link: "https://en.wikipedia.org/wiki/A_Game_of_Thrones:_Genesis", venue: "PC Game", authors: "Cyanide Studio Montreal (C++)", img_src: "Games/AGOT.jpg", img_link: "https://en.wikipedia.org/wiki/A_Game_of_Thrones:_Genesis", themes: ["🎮 Video Games Dev", "💻 GPU Sims"]
             },
             {
-                type: 'game', year: 2010, title: "iSurf on iPhone", title_link: "https://www.pocketgamer.com/isurf/isurf-game-hopes-to-catch-the-app-store-wave/", venue: "iOS Game", authors: "Cyanide Studio Montreal (C++)", img_src: "Games/iSurf.jpg", img_link: "https://www.pocketgamer.com/isurf/isurf-game-hopes-to-catch-the-app-store-wave/", themes: ["🎮 Video Games Development"]
+                type: 'game', year: 2010, title: "iSurf on iPhone", title_link: "https://www.pocketgamer.com/isurf/isurf-game-hopes-to-catch-the-app-store-wave/", venue: "iOS Game", authors: "Cyanide Studio Montreal (C++)", img_src: "Games/iSurf.jpg", img_link: "https://www.pocketgamer.com/isurf/isurf-game-hopes-to-catch-the-app-store-wave/", themes: ["🎮 Video Games Dev"]
             },
             {
-                type: 'game', year: 2009, title: "Blood Bowl", title_link: "https://en.wikipedia.org/wiki/Blood_Bowl_(2009_video_game)", venue: "XBox 360 Game", authors: "Cyanide Studio Montreal (C++)", img_src: "Games/Bloodbowl.jpg", img_link: "https://en.wikipedia.org/wiki/Blood_Bowl_(2009_video_game)", themes: ["🎮 Video Games Development"]
+                type: 'game', year: 2009, title: "Blood Bowl", title_link: "https://en.wikipedia.org/wiki/Blood_Bowl_(2009_video_game)", venue: "XBox 360 Game", authors: "Cyanide Studio Montreal (C++)", img_src: "Games/Bloodbowl.jpg", img_link: "https://en.wikipedia.org/wiki/Blood_Bowl_(2009_video_game)", themes: ["🎮 Video Games Dev"]
             }
         ];
 
         const themeData = [
-            { name: "🤖 GenAI Motion Models", imageSrc: "Neural Animation/neuralRig_gif.mp4" },
-            { name: "📸 Marker-less Capture & Tracking", imageSrc: "Markerless Mocap/office.mp4" },
-            { name: "🔥 Simulation and Control", imageSrc: "SIMBICON/SIMBICON_VR.mp4" },
-            { name: "✍️ Intuitive Interfaces for 3D Authoring", imageSrc: "Line of Action/loa.mp4" },
+
+            { name: "🖱️ Deep Motion Authoring", imageSrc: "Neural Animation/neuralRig_gif.mp4" },
+            { name: "📸 Motion Capture", imageSrc: "Markerless Mocap/office.mp4" },
+            { name: "🤖 Autonomous Characters", imageSrc: "SIMBICON/SIMBICON_VR.mp4" },
+            { name: "✍️ Sketch-based Interfaces", imageSrc: "Line of Action/loa.mp4" },
             { name: "🕶️ Augmented Reality", imageSrc: "AR Costumes/ARCostumes.mp4" },
-            { name: "💻 GPU and Real-Time Simulation", imageSrc: "GPU Fluids/fire_small.mp4" },
-            { name: "🎮 Video Games Development", imageSrc: "Games/Bloodbowl.jpg" }
+            { name: "💻 GPU Sims", imageSrc: "GPU Fluids/fire_small.mp4" },
+            { name: "🎮 Video Games Dev", imageSrc: "Games/Bloodbowl.jpg" }
         ];
 
         function navigateToTheme(themeName) {
