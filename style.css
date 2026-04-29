@@ -32,22 +32,24 @@ a.bio-link { /* Specific styling for links in bio if needed */
 
 h1, h2, h3, h4 {
   color: #E0E1DD;
-
+  letter-spacing: -0.02em;
 }
-h1 { font-size: 2.5em; text-align: center; }
+h1 { font-size: 3em; text-align: center; font-weight: 700; }
 h2 {
   font-size: 1.8em;
-  border-bottom: 1px solid #415A77; /* Muted Blue-Grey */
+  border-bottom: 1px solid #415A77;
   padding-bottom: 0.3em;
-  color: #76E4DA; /* Teal for section headers */
+  color: #76E4DA;
+  font-weight: 600;
 }
-h3.year-header { /* For chronological year headers */
+h3.year-header {
   font-size: 1.5em;
   color: #76E4DA;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
+  font-weight: 600;
 }
-h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
+h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; font-weight: 600; }
 
 
 /* Profile Header */
@@ -69,8 +71,9 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
   text-align: left;
   max-width: 800px;
   margin: 0 auto;
-  font-size: 0.95em;
-  color: #A9B4C2; /* Light Grey-Blue for bio */
+  font-size: 1.0em;
+  color: #C0C8D2;
+  line-height: 1.7;
 }
 .bio p { margin-bottom: 1em; }
 
@@ -141,23 +144,23 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   border-left-color: #76E4DA;
 }
-.publication-entry.game-entry-as-pub { /* Slightly different accent for games if needed */
-  border-left-color: #648ca0; /* A different muted blue for games */
+.publication-entry.game-entry-as-pub {
+  border-left-color: #8B6DAF;
 }
 .publication-entry.game-entry-as-pub:hover {
-  border-left-color: #76E4DA; /* Teal accent on hover consistent */
+  border-left-color: #C4A1E0;
 }
 
 
 .pub-image img,
 .pub-image .pub-video {
-  width: 90px;
-  height: 70px;
-  object-fit: contain; /* Ensure the whole image/video is visible */
-  background-color: #0D1B2A; /* Dark background for letterboxing */
-  display: block; /* Ensure it behaves as a block element for sizing */
-  flex-shrink: 0; /* Prevent shrinking on smaller screens */
-  object-position: center; /* Center the image/video within its bounds */
+  width: 160px;
+  height: 120px;
+  object-fit: contain;
+  background-color: #0D1B2A;
+  display: block;
+  flex-shrink: 0;
+  object-position: center;
   border-radius: 4px;
   border: 1px solid #253146;
 }
@@ -167,7 +170,7 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 70px;
+  min-height: 120px;
 }
 
 .pub-title-line {
@@ -180,7 +183,8 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
   flex-grow: 1;
   color: #E0E1DD;
   font-weight: 600;
-  font-size: 1.0em;
+  font-size: 1.05em;
+  line-height: 1.3;
 }
 .pub-title-anchor:hover { color: #76E4DA; }
 
@@ -205,13 +209,14 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
   margin-bottom: 2px;
   line-height: 1.4;
 }
-.pub-details .award { color: #76E4DA; font-weight: bold; }
+.pub-details .award { color: #C4A1E0; font-weight: bold; }
 
-/* Thematic View - Buttons with Images (4 columns) */
+/* Thematic View - Buttons with Images */
 #theme-buttons-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Enforce 4 columns */
-  gap: 15px; /* Adjusted gap for 4 columns */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   margin-bottom: 30px;
 }
 .theme-button {
@@ -227,8 +232,10 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 160px; /* Adjusted min-height for 4 columns */
-  justify-content: flex-start; /* Align items to start to make space for label */
+  width: calc(25% - 12px);
+  min-height: 160px;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 .theme-button:hover {
   background-color: #253146;
@@ -265,13 +272,9 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
 }
 
 /* Responsive Adjustments */
-@media (max-width: 900px) { /* Slightly larger breakpoint for 4->2 columns */
-  #theme-buttons-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-      gap: 15px;
-  }
-  .theme-button { min-height: 180px; } /* Re-adjust height for 2 columns */
-  .theme-button-img { height: 120px; }
+@media (max-width: 900px) {
+  .theme-button { width: calc(33.33% - 10px); min-height: 160px; }
+  .theme-button-img { height: 100px; }
   .theme-button-label { font-size: 0.9em; }
 }
 
@@ -286,17 +289,14 @@ h4 { font-size: 1.05em; margin-top: 0; margin-bottom: 0.3em; }
       flex-direction: column;
       align-items: center;
   }
-  .pub-image img { margin-bottom: 10px; width: 100%; max-width: 150px; height: auto; }
+  .pub-image img,
+  .pub-image .pub-video { margin-bottom: 10px; width: 100%; max-width: 200px; height: auto; }
   .pub-details { width: 100%; text-align: center; min-height: auto; }
   .pub-title-line { flex-direction: column; align-items: center; }
   .title-icons { margin-left: 0; margin-top: 5px; }
   .authors, .venue { text-align: center; }
 
-  #theme-buttons-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-      gap: 10px;
-  }
-  .theme-button { min-height: 150px; } /* Adjust for mobile */
-  .theme-button-img { height: 90px; }
+  .theme-button { width: calc(50% - 8px); min-height: 140px; }
+  .theme-button-img { height: 80px; }
   .theme-button-label { font-size: 0.8em; }
 }
