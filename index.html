@@ -16,16 +16,15 @@
             <h1>Martin Guay</h1>
             <div class="bio">
                 <p>I lead R&D in animation, VFX and gaming, currently focused on digital humans and character motion. Over the past decade, I built tech and products such as
-                     marker-less capture, AI-powered 3D authoring, as well as highly realistic interactive characters and robots. 
-                
-                    I started my career in video games developement back in Canada, spending a few years building production pipelines and game engines. 
-                    Pushing the envelope lead me eventually to R&D, the Ph.D., SIGGRAPH papers, 
+                     marker-less capture, AI-powered 3D authoring, as well as highly realistic interactive characters and robots.
+
+                    I started my career in video games developement back in Canada, spending a few years building production pipelines and game engines.
+                    Pushing the envelope lead me eventually to R&D, the Ph.D., SIGGRAPH papers,
                     Disney Research, deep learning and computer vision--which all together form the bedrock of the innovative capabilities and tools
-                    I built for artists and engineers today. 
+                    I built for artists and engineers today, along the way resulting in <a href="index.html#chronological" class="bio-link">35 publications</a> and <a href="patents.html" class="bio-link">29 patents</a>.
 
                     <p>I am always happy to connect with people.  Do not hesitate to reach out !</p>
                 <p><a href="mailto:martinguayinfo@gmail.com">martinguayinfo@gmail.com</a></p>
-                <p class="stats-line">Along the way, this has led to <a href="index.html#chronological" class="bio-link">35 publications</a> and <a href="patents.html" class="bio-link">29 patents</a>.</p>
             </div>
         </header>
 <nav class="main-nav">
@@ -73,7 +72,7 @@
             {
                 year: 2026, type: 'publication',
                 title: "Generalized Audio-Driven Synthesis of Precise Drummer Motion",
-                title_link: "https://www.youtube.com/watch?v=SdHuGxSxNgA", venue: "ACM Symposium on Computer Animation", award: "(Best Paper Award)",
+                title_link: "https://www.youtube.com/watch?v=SdHuGxSxNgA", venue: "ACM Symposium on Computer Animation 2026", award: "(Best Paper Award)",
                 authors: "Álvaro G. Iñesta, Mattia Ryffel, Amit H. Bermano, Robert W. Sumner, Martin Guay",
                 img_src: "https://img.youtube.com/vi/SdHuGxSxNgA/hqdefault.jpg", img_link: "https://www.youtube.com/watch?v=SdHuGxSxNgA",
                 pdf_link: "https://studios.disneyresearch.com/app/uploads/2026/08/Generalized-Audio-Driven-Synthesis-of-Precise-Drummer-Motion-Paper.pdf",
@@ -157,7 +156,7 @@
                 year: 2019, type: 'publication', title: "Techniques for Inferring Three-Dimensional Poses From Two-Dimensional Images", title_link: "https://patents.google.com/patent/US10916046B2/en", venue: "US Patent 2019", authors: "Martin Guay, Jakob Buhmann, Dominik Borer", img_src: "Patents/tracking_patent2020.mp4", img_link: "https://patents.google.com/patent/US10916046B2/en", themes: ["📸 Marker-less Motion Capture"]
             },
             {
-                year: 2019, type: 'publication', title: "High Resolution Rig-space Neural Rendering", title_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", venue: "arxiv 2019", authors: "Dominik Borer, Jakob Buhmann, Martin Guay", img_src: "Rigspace Neural Rendering/RigSpaceNeuralRendering.jpeg", img_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", pdf_link: "https://arxiv.org/pdf/2003.09820.pdf", video_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", themes: ["🕶️ Augmented Reality"]
+                year: 2019, type: 'publication', title: "Rig Space Neural Rendering", title_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", venue: "arxiv 2019", authors: "Dominik Borer, Jakob Buhmann, Martin Guay", img_src: "Rigspace Neural Rendering/RigSpaceNeuralRendering.jpeg", img_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", pdf_link: "https://arxiv.org/pdf/2003.09820.pdf", video_link: "https://www.youtube.com/watch?v=QEatuZaTBy4", themes: ["🕶️ Augmented Reality"]
             },
             {
                 year: 2018, type: 'publication', title: "AR Costumes: Automatically Augmenting Watertight Costumes from a single RGB Image", title_link: "https://www.youtube.com/watch?v=p2Lj2ScIkvA", venue: "VRCAI 2018", authors: "Christoph Maurhofer, Gokcen Cimen, Mattia Ryffel, Robert W. Sumner, Martin Guay", img_src: "AR Costumes/ARCostumes.mp4", img_link: "https://www.youtube.com/watch?v=p2Lj2ScIkvA", pdf_link: "https://s3-us-west-1.amazonaws.com/disneyresearch/wp-content/uploads/20181029220913/AR-Costumes-Automatically-Augmenting-Watertight-Costumes-from-a-single-RGB-Image-Paper.pdf", video_link: "https://www.youtube.com/watch?v=p2Lj2ScIkvA", themes: ["🕶️ Augmented Reality"]
@@ -199,7 +198,7 @@
                 video_link: "https://www.youtube.com/watch?v=h0wz-08cgow", themes: ["🖱️ Neural Motion Rigs"]
             },
             {
-                year: 2016, type: 'publication', title: "Music-Driven Animaiton Using Motion Editing", 
+                year: 2016, type: 'publication', title: "Music-Driven Animation Using Motion Editing", 
                 title_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", venue: "SCA 2016", authors: "Renzo Roth & CGL Ph.D. Students, Martin Guay", 
                 img_src: "Karaoke/SCAKaraoke.png", img_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", video_link: "https://www.youtube.com/watch?v=YpqNCbz6asg", themes: ["🤖 Intelligent Motion Controllers"]
             },
@@ -321,28 +320,11 @@
 
         function displayChronological() {
             const container = document.getElementById('chronological-view');
-            container.innerHTML = '';
-            let currentYear = 0;
-            let yearGroupHtml = '';
             const academicPubs = publications
                 .filter(pub => pub.type !== 'game')
                 .sort((a, b) => b.year - a.year);
 
-            academicPubs.forEach(pub => {
-                if (pub.year !== currentYear) {
-                    if (yearGroupHtml) { 
-                        yearGroupHtml += '</div>';
-                        container.innerHTML += yearGroupHtml;
-                    }
-                    currentYear = pub.year;
-                    yearGroupHtml = `<h3 class="year-header">${currentYear}</h3><div class="year-publications">`;
-                }
-                yearGroupHtml += createPublicationHTML(pub);
-            });
-            if (yearGroupHtml) { 
-                 yearGroupHtml += '</div>';
-                 container.innerHTML += yearGroupHtml;
-            }
+            container.innerHTML = academicPubs.map(createPublicationHTML).join('');
         }
         
         function displayThematicButtons() {
@@ -417,7 +399,7 @@
             "🕶️ Augmented Reality": [
                 "AR Costumes",
                 "AR Characters Navigate and React Realistically",
-                "High Resolution Rig-space Neural Rendering",
+                "Rig Space Neural Rendering",
                 "Augmenting Cats and Dogs",
                 "AR Poser"
             ]
