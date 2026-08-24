@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Martin Guay - Patents">
+    <meta name="author" content="Martin Guay">
+    <title>Martin Guay - Patents</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .patents-intro { text-align: center; max-width: 700px; margin: 0 auto 30px; color: #C0C8D2; }
+        .patent-list { list-style: none; padding: 0; margin: 0 auto; max-width: 800px; }
+        .patent-entry {
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            background-color: #1B263B;
+            border-radius: 6px;
+            border-left: 3px solid #415A77;
+            transition: box-shadow 0.3s ease, border-left-color 0.3s ease;
+        }
+        .patent-entry:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.2); border-left-color: #76E4DA; }
+        .patent-entry .patent-title { color: #E0E1DD; font-weight: 600; }
+        .patent-entry .patent-meta { color: #8895A7; font-size: 0.9em; margin-top: 2px; }
+        .patent-status {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .patent-status.granted { background-color: rgba(118, 228, 218, 0.15); color: #76E4DA; }
+        .patent-status.filed { background-color: rgba(139, 109, 175, 0.2); color: #C4A1E0; }
+        .back-link { display: block; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="profile-header">
+            <img src="Self Portraits/MG2025.jpeg" alt="Martin Guay" class="profile-pic">
+            <h1>Martin Guay</h1>
+        </header>
+
+        <h2 style="text-align:center; border-bottom:none;">Patents</h2>
+        <p class="patents-intro">A list of granted patents and filed patent applications from my work on AI-driven character animation, motion capture, and augmented reality.</p>
+
+        <main>
+            <ul class="patent-list" id="patent-list"></ul>
+        </main>
+
+        <a href="index.html" class="back-link">&larr; Back to Martin Guay</a>
+
+        <footer>
+            <p>© <span id="current-year"></span> Martin Guay. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const patents = [
+            { title: "Compiling Character Definitions into Definition-Traceable Fidelity Test Suites for AI Characters", year: 2026, status: "Filed" },
+            { title: "Multi ID Invertible Neural Rig for Facial Animation", year: 2026, status: "Filed" },
+            { title: "Automatic Human-to-Animal Motion Retargeting", year: 2026, status: "Filed" },
+            { title: "A Real-Time 3D AI Character System with Synchronized Multi-Character Orchestration", year: 2026, status: "Filed" },
+            { title: "Generative 2D Motion Control for Efficient 2D Match Animation and Mocap Cleanup", year: 2026, status: "Filed" },
+            { title: "Motion Generation Model for Variable Time Motion Extension and Sparse Orientation Control", year: 2026, status: "Filed" },
+            { title: "Generalized Music-driven Band Animation", year: 2026, status: "Filed" },
+            { title: "Controllable Generation of Stylized Hand-animated Motion", year: 2025, status: "Filed" },
+            { title: "Inference-based Generative Motion Editing and Compositing", year: 2025, status: "Filed" },
+            { title: "Local-Global Neural Face Rigs for Artist-friendly Direct Manipulation", year: 2025, status: "Filed" },
+            { title: "Implicit Bézier Motion Model for Improved Time Control of Temporal Motion Outline", year: 2025, status: "Filed" },
+            { title: "Motion Mosaic: Mix-and-Match Motion Synthesis via Disentangled Representations with Residual VQ-VAE", year: 2025, status: "Filed" },
+            { title: "Factorized Motion Completion for Precise and Character-Agnostic Motion Diffusion", year: 2024, status: "Filed" },
+            { title: "Skel-inbetweening for Intuitive Neural Motion Authoring", year: 2024, status: "Filed" },
+            { title: "Automated Motion Feature-Based Identification of Subjects in Video", year: 2023, status: "Filed" },
+            { title: "Automated Pose-Based Camera Calibration", year: 2023, status: "Filed" },
+            { title: "Rig Embeddings for Generalized Neural Inverse Kinematics", year: 2023, status: "Filed" },
+            { title: "Pose-aware Neural Inverse Kinematics", meta: "EP Patent 4,492,283 A1", year: 2025, status: "Granted" },
+            { title: "Real-time Matting System", meta: "US Patent App. 2024/0312035 A1", year: 2024, status: "Granted" },
+            { title: "Rig-space Neural Rendering of Digital Assets", meta: "US Patent 11,995,749 B2", year: 2024, status: "Granted" },
+            { title: "Reducing Domain Shift in Neural Motion Controllers", meta: "AU Patent App. 2024201102 A1", year: 2024, status: "Granted" },
+            { title: "Automated Image Augmentation Using a Virtual Character", meta: "US Patent App. 2023/0177784 A1", year: 2023, status: "Granted" },
+            { title: "Stable Pose Estimation with Analysis by Synthesis", meta: "US Patent App. 2022/0392099 A1", year: 2022, status: "Granted" },
+            { title: "Techniques for Inferring Three-Dimensional Poses from Two-Dimensional Images", meta: "US Patent App. 2021/0374993 A1", year: 2021, status: "Granted" },
+            { title: "Techniques for Feature-Based Neural Rendering", meta: "US Patent App. 2021/0019928 A1", year: 2021, status: "Granted" },
+            { title: "Joint Estimation from Images", meta: "US Patent 10,916,046 B2", year: 2021, status: "Granted" },
+            { title: "Automated Costume Augmentation Using Shape Estimation", meta: "US Patent App. 2020/0118333 A1", year: 2020, status: "Granted" },
+            { title: "Automatically Generating Quadruped Locomotion Controllers", meta: "US Patent 10,553,009 B2", year: 2020, status: "Granted" },
+            { title: "Modeling Interactions Between Simulated Characters and Real-World Objects for More Realistic Augmented Reality", meta: "US Patent 10,445,940 B2", year: 2019, status: "Granted" }
+        ];
+
+        const listEl = document.getElementById('patent-list');
+        patents
+            .sort((a, b) => b.year - a.year)
+            .forEach(p => {
+                const li = document.createElement('li');
+                li.className = 'patent-entry';
+                const statusClass = p.status.toLowerCase();
+                li.innerHTML = `
+                    <span class="patent-title">${p.title}</span>
+                    <span class="patent-status ${statusClass}">${p.status}</span>
+                    <div class="patent-meta">${p.meta ? p.meta + ' &middot; ' : ''}${p.year}</div>
+                `;
+                listEl.appendChild(li);
+            });
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
