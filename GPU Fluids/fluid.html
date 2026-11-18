@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stable Fluids</title>
+<style>
+  :root { --bg: #0b0b10; --fg: #c9c9d4; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 16px; }
+  canvas { display: block; width: 100%; aspect-ratio: 16 / 10; border-radius: 6px; background: #08080c; touch-action: none; cursor: crosshair; }
+  p { opacity: .7; margin: 8px 0 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <canvas id="fluid"></canvas>
+  <p>Stable Fluids (Stam 1999) on the GPU with WebGL2. Drag to stir.</p>
+</div>
+
+<script src="stable-fluids.js"></script>
+<script>
+const P = {
+  W: 256, H: 160,
+  stepsPerSecond: 60,
+  // colored emitters: grid-normalized position, color, force (direction sways around `angle`)
+  emitters: [
+    { pos: [0.25, 0.10], color: [0.30, 0.95, 0.85], angle: 90, sway: 35, phase: 0.0 },
+    { pos: [0.50, 0.10], color: [0.65, 0.40, 1.00], angle: 90, sway: 35, phase: 2.1 },
+    { pos: [0.75, 0.10], color: [1.00, 0.40, 0.55], angle: 90, sway: 35, phase: 4.2 },
+  ],
+  radius: 4, force: 40, dyeRate: 1.5, swayFreq: 0.25,
+  mouseGain: 1.5, mouseRadius: 5,
+};
+
+const canvas = document.getElementById('fluid');
+const fluid = StableFluids.create(canvas, {
+  W: P.W, H: P.H, dt: 0.1, pressureIters: 30, dissipation: 0.997, buoyancy: 0.8, gain: 1.4,
+});
+
+/* drag to stir: impulse + dye of a slowly cycling hue */
+const hue = h => [0, 8, 4].map(n => { const k = (n + h * 12) % 12; return 0.5 - 0.5 * Math.max(-1, Math.min(k - 3, 9 - k, 1)); });
+const mouse = { down: false, last: null, pos: [0, 0], d: [0, 0] };
+function toGrid(e) {
+  const r = canvas.getBoundingClientRect();
+  return [(e.clientX - r.left) / r.width * P.W, (1 - (e.clientY - r.top) / r.height) * P.H];
+}
+canvas.addEventListener('pointerdown', e => { mouse.down = true; mouse.last = toGrid(e); canvas.setPointerCapture(e.pointerId); });
+canvas.addEventListener('pointerup', () => { mouse.down = false; });
+canvas.addEventListener('pointermove', e => {
+  if (!mouse.down) return;
+  const g = toGrid(e);
+  mouse.d[0] += g[0] - mouse.last[0]; mouse.d[1] += g[1] - mouse.last[1];
+  mouse.pos = g; mouse.last = g;
+});
+
+function step(t) {
+  const dt = fluid.params.dt;
+  for (const em of P.emitters) {
+    const a = (em.angle + em.sway * Math.sin(2 * Math.PI * P.swayFreq * t + em.phase)) * Math.PI / 180;
+    fluid.splat(em.pos[0] * P.W, em.pos[1] * P.H, P.radius,
+      dt * P.force * Math.cos(a), dt * P.force * Math.sin(a),
+      ...em.color.map(c => c * dt * P.dyeRate));
+  }
+  if (mouse.d[0] || mouse.d[1]) {
+    const s = Math.min(1, Math.hypot(...mouse.d) * 0.2);
+    fluid.splat(mouse.pos[0], mouse.pos[1], P.mouseRadius, mouse.d[0] * P.mouseGain, mouse.d[1] * P.mouseGain,
+      ...hue(t * 0.1).map(c => c * s));
+    mouse.d = [0, 0];
+  }
+  fluid.step();
+}
+
+/* fixed-rate stepping (same speed on 60 / 120 Hz screens), at most 2 steps per frame */
+let acc = 0, last = performance.now();
+function frame(now) {
+  acc = Math.min(acc + (now - last) / 1000 * P.stepsPerSecond, 2);
+  last = now;
+  if (acc >= 1) {
+    for (; acc >= 1; acc--) step(now / 1000);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = Math.round(canvas.clientWidth * dpr), h = Math.round(canvas.clientHeight * dpr);
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+    fluid.render(w, h);
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
