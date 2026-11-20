@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,13 @@
     <meta name="description" content="Martin Guay - GenAI for 3D Motion">
     <meta name="keywords" content="generative AI, 3D motion, Neural Motion Rigs, animation, motion capture, deep learning, VFX, AR, VR, video games">
     <meta name="author" content="Martin Guay">
+    <meta name="robots" content="noindex">
     <title>Martin Guay</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* text floats over the fluid: a soft navy halo keeps it legible over bright dye */
+        .profile-header h1, .bio { text-shadow: 0 0 6px #0D1B2A, 0 1px 3px #0D1B2A; }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -499,5 +504,8 @@
             document.getElementById('current-year').textContent = new Date().getFullYear();
         });
     </script>
+    <!-- Fluid background (test) -->
+    <script src="GPU Fluids/stable-fluids.js" defer></script>
+    <script src="GPU Fluids/fluid-background.js" defer></script>
 </body>
 </html>
